@@ -189,6 +189,10 @@ body {
 .battery-info {
   margin-bottom: 50px;
 }
+.rating {
+  margin-top:10px;
+  margin-bottom: 10px;
+}
 @media(max-width:767px) {
   .navbar-default .navbar-nav>li>a {
     text-align: center;
@@ -197,7 +201,7 @@ body {
     padding-left: 40px;
     padding-right: 40px;
   }
-  .availability .phone {
+  .details .phone {
     width:100%;
   }
 }

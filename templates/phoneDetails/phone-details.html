@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container details">
   <uib-tabset active="active">
     <uib-tab index="0" heading="Availability and Networks">
       <h3>Availability</h3>
@@ -78,7 +78,7 @@
       <div class="row">
         <div class="col-md-6 col-sm-12">
           <img ng-src="{{mainImageUrl}}" class="phone" />
-          <p>Rate this phone:
+          <p class="rating">Rate this phone:
             <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>
           </p>
            <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
