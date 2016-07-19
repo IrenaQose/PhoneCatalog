@@ -1,0 +1,150 @@
+<div class="container">
+  <uib-tabset active="active">
+    <uib-tab index="0" heading="Availability and Networks">
+      <h3>Availability</h3>
+      <div class="row availability">
+        <div class="col-md-6 col-sm-12">
+          <img ng-src="{{mainImageUrl}}" class="phone" />
+          <p>Rate this phone:
+            <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>
+          </p>
+           <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
+        </div>
+        <div class="col-md-6 col-sm-12">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <div class="availability-details" ng-repeat="img in phone.images">
+              <img ng-src="{{img}}" ng-click="setImage(img)" height="100px"/>
+            </div>
+          </div>
+        </div>
+        <div class="row buy-btn">
+            <button data-toggle="modal" data-target="#myModal">Buy now</button>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Fill the form to make an order</h4>
+                  </div>
+                  <div class="modal-body">
+                    <form id="modal-form">
+                      <input type="text" placeholder="Name Surname" name="name" id="name" class="form-control">
+                      <input type="text" placeholder="Country" name="country" id="country" class="form-control">
+                      <input type="text" placeholder="City" name="city" id="city" class="form-control">
+                      <input type="text" placeholder="Shipping Address" name="address" id="address" class="form-control">
+                      <input type="text" placeholder="Email:example@domain.something" name="email" id="email" class="form-control">
+                    </form>
+                    <p><b>Select payment method:</b></p>
+                    <p class="payment"><input type="radio">Western Union</p>
+                    <p class="payment"><input type="radio">Pay Pal</p>
+                    <p class="payment"><input type="radio">Credit Card</p>
+                    <p class="payment"><input type="radio">Cash</p>
+                    <p class="terms"><input type="checkbox"> I accept the terms of shipping. <a>Click here to read it.</a></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">ORDER NOW</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">X</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row phone-desc">
+          <div class="col-sm-12">
+            <h2>{{phone.name}}</h2>
+            <p>{{phone.description}}</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </uib-tab>
+    <uib-tab index="1" heading="Battery">
+      <h3>Battery</h3>
+      <div class="row battery-info">
+        <div class="col-sm-4">
+          <h4>Type</h4>
+          <p>{{phone.battery.type}}</p>
+        </div>
+        <div class="col-sm-4">
+          <h4> Talk Time</h4>
+          <p>{{phone.battery.talkTime}}</p>
+        </div>
+        <div class="col-sm-4">
+          <h4>Standby Time</h4>
+          <p>{{phone.battery.standbyTime}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <img ng-src="{{mainImageUrl}}" class="phone" />
+          <p>Rate this phone:
+            <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>
+          </p>
+           <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
+        </div>
+        <div class="col-md-6 col-sm-12">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <div class="availability-details" ng-repeat="img in phone.images">
+              <img ng-src="{{img}}" ng-click="setImage(img)" height="100px"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </uib-tab>
+    <uib-tab index="2" heading="Storage and Memory">
+      <h3>Storage and Memory</h3>
+      <div class="row">
+        <div class="col-sm-6">
+          <h4>RAM</h4>
+          <p>{{phone.storage.ram}}</p>
+        </div>
+        <div class="col-sm-6">
+          <h4>Internal Storage</h4>
+          <p>{{phone.storage.flash}}</p>
+        </div>
+      </div>
+    </uib-tab>
+    <uib-tab index="3" heading="Connectivity">
+      <h3>Connectivity</h3>
+      <div class="row" style="margin-top:50px;">
+        <div class="col-sm-2">
+          <h4>Bluetooth</h4>
+          <p>{{phone.connectivity.bluetooth}}</p>
+        </div>
+        <div class="col-sm-2">
+          <h4>GPS</h4>
+          <p>{{phone.connectivity.gps}}</p>
+        </div>
+        <div class="col-sm-2">
+          <h4>Infrared</h4>
+          <p>
+            {{phone.connectivity.infrared}}
+          </p>
+        </div>
+        <div class="col-sm-3">
+          <h4>Cell</h4>
+          <p>
+            {{phone.connectivity.cell}}
+          </p>
+        </div>
+        <div class="col-sm-3">
+          <h4>Wifi</h4>
+          <p>
+            {{phone.connectivity.wifi}}
+          </p>
+        </div>
+      </div>
+    </uib-tab>
+    <uib-tab index="4" heading="Android">Static content 4</uib-tab>
+    <uib-tab index="5" heading="Size and Weight">Static content 5</uib-tab>
+    <uib-tab index="6" heading="Display">Static content 5</uib-tab>
+    <uib-tab index="7" heading="Hardware">Static content 5</uib-tab>
+    <uib-tab index="8" heading="Camera">Static content 5</uib-tab>
+    <uib-tab index="9" heading="Additional Features">Static content 5</uib-tab>
+
+</uib-tabset>
+
+</div>

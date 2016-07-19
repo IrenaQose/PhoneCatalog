@@ -1,0 +1,203 @@
+.navbar-default {
+  background-image: linear-gradient(to bottom,#222 0,#222 100%);
+  margin-bottom: 0;
+  border: none;
+  border-radius: 0;
+}
+.navbar-default .navbar-nav>li>a {
+  color: #ccc;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+  color: #fff;
+}
+#slides_control > div{
+  height: 200px;
+}
+#slides_control {
+  position:absolute;
+  width: 400px;
+  left:50%;
+  top:20px;
+ margin-left:-200px;
+}
+body {
+  background-color: #000;
+}
+#myCarousel {
+  padding-top: 40px;
+}
+.home-rightCol {
+  padding-top: 60px;
+}
+.home-rightCol h3,.home-rightCol p  {
+  color:#fff;
+  text-align: center;
+}
+.search-phone {
+  background-color: #fcfbe3;
+  padding: 35px;
+  border-radius: 20px;
+}
+.search-row {
+  margin-top: 30px;
+  text-align: center;
+}
+.search-phone select {
+  padding: 5px 0;
+  margin-right: 4px;
+}
+.search-phone input, .search-phone select {
+  border-radius: 5px;
+}
+.phone-list {
+  padding-bottom: 40px;
+  background-color: #fcfbe3;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  border: 5px solid #ff0000;
+  border-radius: 20px
+}
+.phone-list button {
+  background-color: #428bca;
+  border: none;
+  padding: 4px 7px;
+  border-radius: 7px;
+  color:#fff;
+}
+.lists {
+  margin-top: 60px;
+}
+.phone-list img {
+  height: 122px;
+  padding-top: 14px;
+}
+.tab-panels ul {
+  margin: 0;
+  padding: 0;
+}
+
+.tab-panels ul li {
+  list-style-type: none;
+  display: inline-block;
+  background: #999;
+  margin: 0;
+  padding: 3px 10px;
+  border-radius: 10px 10px 0 0;
+  color: #fff;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.tab-panels ul li:hover {
+  color: #fff;
+  background: #666;
+}
+
+.tab-panels ul li.active {
+  color: #fff;
+  background: #666;
+}
+
+.tab-panels .panel {
+  display: none;
+  background: #c9c9c9;
+  padding: 30px;
+  border-radius: 0 0 10px 10px;
+}
+
+.tab-panels .panel.active {
+  display: block;
+}
+.nav-tabs>li>a  {
+  font-size: 12px;
+}
+.availability {
+  margin-top: 60px;
+}
+.availability-details {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.buy-btn {
+  text-align: center;
+  margin-top: 25px;
+}
+.buy-btn button {
+  padding: 10px 85px;
+  border-radius: 10px;
+  background-color: #fff;
+  font-weight: bold;
+  border: none;
+}
+.availability .phone-desc {
+  color:white;
+
+}
+.availability p {
+  color:#fff;
+  margin-top: 25px;
+  font-weight: bold;
+}
+.availability .phone-desc p{
+  font-weight: normal;
+}
+#myModal .modal-footer .btn-default {
+  padding: 10px 15px;
+  background-image: linear-gradient(to bottom,#428bca 0,#428bca 100%);
+}
+#myModal .modal-footer .btn-default:hover {
+  background-color: #428bca;
+}
+#myModal .modal-footer .btn-primary {
+  padding: 10px 25px;
+  background-image: linear-gradient(to bottom,#428bca 0,#428bca 100%);
+}
+#myModal .modal-footer .btn-primary:hover, #myModal .modal-footer .btn-primary:focus {
+  background-color: #428bca;
+}
+#myModal .modal-header h4 {
+  text-align: left;
+}
+#modal-form input {
+  width:100%;
+  margin-bottom:10px;
+}
+#myModal .modal-body p {
+  color:#222;
+  text-align: left;
+}
+.modal-body .payment {
+  margin-top:0;
+  margin-bottom: 5px;
+  margin-left: 30px;
+}
+.modal-body .terms a {
+  color:#428bca;
+}
+.modal-body .terms a:hover{
+  text-decoration: none;
+}
+#myModalLabel {
+  color:#222;
+}
+.tab-content h3,
+.tab-content h4,
+.tab-content p {
+  color:#fff;
+}
+.battery-info {
+  margin-bottom: 50px;
+}
+@media(max-width:767px) {
+  .navbar-default .navbar-nav>li>a {
+    text-align: center;
+  }
+  .search-row {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .availability .phone {
+    width:100%;
+  }
+}
