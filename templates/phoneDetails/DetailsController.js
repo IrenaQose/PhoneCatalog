@@ -9,8 +9,9 @@ angular.module('DetailsController',[])
   $scope.setImage = function setImage(imageUrl) {
     $scope.mainImageUrl = imageUrl;
    };
+   
   $scope.setImage($scope.mainImageUrl);
-  
+
   $scope.model = {
   name: 'Tabs'
 };
